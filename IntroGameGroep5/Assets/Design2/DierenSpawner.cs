@@ -57,6 +57,5 @@ public class DierenSpawner : MonoBehaviour
         Destroy(thispijl, pijlTimer);
 
         GameObject thisDier = Instantiate(dier, west);
-        //thisDier.GetComponent<Dier>().SetDirection(Vector2.up);
     }
 }
