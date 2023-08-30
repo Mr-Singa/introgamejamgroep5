@@ -9,4 +9,14 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void GameOver1()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void GameOver2()
+    {
+        SceneManager.LoadScene("Design2Scene");
+    }
 }
