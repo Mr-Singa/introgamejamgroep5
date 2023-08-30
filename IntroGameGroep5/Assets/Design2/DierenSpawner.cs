@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dieren : MonoBehaviour
+public class DierenSpawner : MonoBehaviour
 {
-    public float dierSPEED;
-
     public GameObject dier;
 
     public GameObject pijl;
@@ -38,8 +36,6 @@ public class Dieren : MonoBehaviour
         Destroy(thispijl, pijlTimer);
 
         GameObject thisDier = Instantiate(dier, noord);
-
-        thisDier.transform.position = Vector3.MoveTowards(thisDier.transform.position, zuid.position, dierSPEED * Time.deltaTime);
     }
     public void SpawnOost()
     {
@@ -47,8 +43,6 @@ public class Dieren : MonoBehaviour
         Destroy(thispijl, pijlTimer);
 
         GameObject thisDier = Instantiate(dier, oost);
-
-        thisDier.transform.position = Vector3.MoveTowards(thisDier.transform.position, zuid.position, dierSPEED * Time.deltaTime);
     }
     public void SpawnZuid()
     {
@@ -56,8 +50,6 @@ public class Dieren : MonoBehaviour
         Destroy(thispijl, pijlTimer);
 
         GameObject thisDier = Instantiate(dier, zuid);
-
-        thisDier.transform.position = Vector3.MoveTowards(thisDier.transform.position, zuid.position, dierSPEED * Time.deltaTime);
     }
     public void SpawnWest()
     {
@@ -65,7 +57,6 @@ public class Dieren : MonoBehaviour
         Destroy(thispijl, pijlTimer);
 
         GameObject thisDier = Instantiate(dier, west);
-
-        thisDier.transform.position = Vector3.MoveTowards(thisDier.transform.position, zuid.position, dierSPEED * Time.deltaTime);
+        //thisDier.GetComponent<Dier>().SetDirection(Vector2.up);
     }
 }
